@@ -38,21 +38,24 @@
                                     </div>
                                 </td>
                                 <td rowspan="7" style="width: 30%;">
-<!--                                    <div style="text-align: center; margin-bottom: 20px;">-->
-<!--                                        <img t-if="o.company_id.logo"-->
-<!--                                             t-att-src="'data:image/png;base64,'+o.company_id.logo.decode('utf-8')"-->
-<!--                                             alt="Company Logo" width="200" height="80"/>-->
-<!--                                    </div>  -->
+                                    <!--                                    <div style="text-align: center; margin-bottom: 20px;">-->
+                                    <!--                                        <img t-if="o.company_id.logo"-->
+                                    <!--                                             t-att-src="'data:image/png;base64,'+o.company_id.logo.decode('utf-8')"-->
+                                    <!--                                             alt="Company Logo" width="200" height="80"/>-->
+                                    <!--                                    </div>  -->
 
                                     <div class="text-center pb-3 border-bottom mb-4">
-                                        <img t-if="o.company_id.logo" style="max-height:180px; max-width: 100%; width:auto"
+                                        <img t-if="o.company_id.logo"
+                                             style="max-height:180px; max-width: 100%; width:auto"
                                              t-att-src="'data:image/png;base64,'+o.company_id.logo.decode('utf-8')"
                                              alt="Company Logo"/>
                                     </div>
 
                                 </td>
                                 <td style="width: 10%;">Quote No.:</td>
-                                <td style="width: 30%;"><t t-esc="o.proforma_sequence"/></td>
+                                <td style="width: 30%;">
+                                    <t t-esc="o.proforma_sequence"/>
+                                </td>
                             </tr>
                             <tr style="">
                                 <td style="width: 30%;  margin-left: 30px;">
@@ -255,14 +258,25 @@
                     </t>
                 </div>
             </div>
-            <div style="margin-left: 45px; margin-right: 40px; margin-top: 330px; font-size: 18px">
+            <!--            <div style="margin-left: 45px; margin-right: 40px; margin-top: 330px; font-size: 18px">-->
+            <!--                <strong>PRICE VALID 5 WORKING DAYS FROM DATE OF ISSUE</strong>-->
+            <!--            </div>-->
+            <!--            <div style="margin-left: 45px; margin-right: 40px; margin-top: 20px; font-size: 19px">-->
+            <!--                <strong>Thank you for your business.</strong>-->
+            <!--            </div>-->
+            <!--            &lt;!&ndash; Add the red horizontal line as a footer below the printed paper &ndash;&gt;-->
+            <!--            <div style="position: absolute; margin-left: 53px; margin-right: 20px; bottom: 0; left: 0; right: 0; border-top: 7px solid red;"></div>-->
+            <!--            <div class="footer">-->
+            <!-- Add the red horizontal line as a footer below the content -->
+            <!-- Include the fixed content at the bottom of the page -->
+            <div style="position: absolute; bottom: 90px; left: 45px; right: 40px; font-size: 18px">
                 <strong>PRICE VALID 5 WORKING DAYS FROM DATE OF ISSUE</strong>
             </div>
-            <div style="margin-left: 45px; margin-right: 40px; margin-top: 20px; font-size: 19px">
+            <div style="position: absolute; bottom: 40px; left: 45px; right: 40px; font-size: 19px">
                 <strong>Thank you for your business.</strong>
             </div>
-            <!-- Add the red horizontal line as a footer below the printed paper -->
-            <div style="position: absolute; margin-left: 53px; margin-right: 20px; bottom: 0; left: 0; right: 0; border-top: 7px solid red;"></div>
+            <div style="position: absolute; bottom: 0; left: 0; right: 0; margin-left: 48px; margin-right: 20px; border-top: 7px solid red;"></div>
+
         </t>
     </template>
 </odoo>
