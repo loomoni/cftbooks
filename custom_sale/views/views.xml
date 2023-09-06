@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
+
+        <!-- Inherit the invoice to add print button -->
+        <record id="view_invoice_form_inherited" model="ir.ui.view">
+            <field name="name">account.invoice.form.inherit</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/header/button[@name='action_invoice_sent']" position="replace">
+                    <button string="Print Invoice" name="action_print_invoice" type="object" class="oe_highlight"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Inherit the invoice to add print button in supplier form -->
+        <record id="view_invoice_supplier_form_inherited" model="ir.ui.view">
+            <field name="name">account.invoice.supplier.form.inherit</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_supplier_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/header/button[@name='action_invoice_open']" position="after">
+                    <button string="Print Invoice" name="action_print_invoice" type="object" class="oe_highlight"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Inherit Delivery order print Delivery not -->
+        <record id="view_stock_picking_form_inherited" model="ir.ui.view">
+            <field name="name">stock.picking.form.inherit</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/header/button[@name='button_scrap']" position="replace">
+                    <button string="Print Delivery Note" name="print_delivery_note_action" type="object" class="oe_highlight"/>
+                </xpath>
+            </field>
+        </record>
+
         <!-- Inherit the sale.order form view -->
         <record id="view_sale_order_form_inherit" model="ir.ui.view">
             <field name="name">sale.order.form.inherit</field>
