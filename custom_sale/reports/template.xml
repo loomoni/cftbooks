@@ -289,8 +289,8 @@
                         <!-- Blue horizontal line above the title -->
                         <hr style="border-top: 5px solid blue; width: 36%; margin-right: 10px; display: inline-block;"></hr>
                         <!-- Invoice title -->
-<!--                        <h1 style="font-size: 25px; color: blue; display: inline-block;">INVOICE</h1>-->
-                        <h1 style="font-size: 25px; color: blue; font-family: 'Times New Roman', Times, serif; display: inline-block;">INVOICE</h1>
+                        <h1 style="font-size: 25px; color: blue; display: inline-block;">INVOICE</h1>
+<!--                        <h1 style="font-size: 25px; color: blue; font-family: 'DejaVu Serif', serif; display: inline-block;">INVOICE</h1>-->
 
                         <!-- Blue horizontal line below the title -->
                         <hr style="border-top: 5px solid blue; width: 43%; margin-left: 10px; display: inline-block;"></hr>
@@ -299,7 +299,7 @@
 
                         <!-- Your content goes here -->
 
-                        <table style="margin-left: 40px; width:100%;"
+                        <table style="margin-left: 35px; width:100%;"
                                class="table table-condensed">
                             <tr>
                                 <td style="width: 30%;">
@@ -428,7 +428,7 @@
                             </tr>
                         </table>
                         <br/>
-                        <table style="width: 94%; border-collapse: collapse; margin-left: 45px; border: 1px solid #000;">
+                        <table style="width: 94%; border-collapse: collapse; margin-left: 35px; border: 1px solid #000;">
                             <thead>
                                 <tr style="font-size: 20px;">
                                     <th style="border: 1px solid #000; color: blue; padding: 8px; text-align: left; background-color: #f2f2f2;">
@@ -495,7 +495,7 @@
                             </tbody>
                         </table>
                         <br/>
-                        <table style="width: 94%; border-collapse: collapse; margin-left: 45px;">
+                        <table style="width: 94%; border-collapse: collapse; margin-left: 35px;">
                             <tr>
                                 <td style="padding: 8px; text-align: left; background-color: #ffffff;">
                                 </td>
@@ -551,7 +551,7 @@
                                     <td style="width: 8%; padding: 8px; text-align: left; background-color: #ffffff;">
 
                                     </td>
-                                    <td style="border-left: 1px solid #000; border-right: 1px solid #000; border-top: 1px solid #000; border-bottom: 1px solid #000; width: 18%; padding: 8px; text-align: right; background-color: #f2f2f2;">
+                                    <td style="font-size: 15px; border-left: 1px solid #000; border-right: 1px solid #000; border-top: 1px solid #000; border-bottom: 1px solid #000; width: 18%; padding: 8px; text-align: right; background-color: #f2f2f2;">
                                         <t t-foreach="o.get_payment_dates()" t-as="payment_date">
                                             <div style="font-style: italic; text-align: left;">
                                                 <p>Paid on
@@ -560,13 +560,10 @@
                                             </div>
                                         </t>
                                     </td>
-                                    <td style="width: 18%; padding: 8px; border-right: 1px solid #000; border-top: 1px solid #000; border-bottom: 1px solid #000; text-align: right; background-color: #f2f2f2;">
+                                    <td style="font-size: 15px; width: 18%; padding: 8px; border-right: 1px solid #000; border-top: 1px solid #000; border-bottom: 1px solid #000; text-align: right; background-color: #f2f2f2;">
                                         <t t-foreach="o.get_payment_amount()" t-as="payment_amount">
                                             <div style="text-align: right;">
                                                 <p>
-                                                    <!--                                                  <t t-esc="payment_amount"  t-field-options="{'widget': 'monetary'}"/> TSh-->
-                                                    <!--                                                  <t t-esc="formatLang(payment_amount, digits=2)"/> TSh-->
-                                                    <!--                                                    <t t-esc="'{:.2f}'.format(payment_amount)"/> TSh-->
                                                     <t t-esc="o.format_payment_amount(payment_amount)"/>
                                                     TSh
                                                 </p>
@@ -608,7 +605,7 @@
                 <!--            <div class="footer">-->
                 <!-- Add the red horizontal line as a footer below the content -->
                 <!-- Include the fixed content at the bottom of the page -->
-                <div style="position: absolute; bottom: 90px; left: 45px; right: 40px; font-size: 20px">
+                <div style="position: absolute; bottom: 90px; left: 35px; right: 40px; font-size: 18px">
                     <strong>BANK: NMB 24710014112</strong>
                     <br/>
                     <br/>
@@ -616,10 +613,10 @@
                         <t t-esc="o.company_info().get('name')"/>
                     </strong>
                 </div>
-                <div style="position: absolute; bottom: 40px; left: 45px; right: 40px; font-size: 19px">
+                <div style="position: absolute; bottom: 40px; left: 35px; right: 40px; font-size: 17px">
                     <strong>Thank you for your business.</strong>
                 </div>
-                <div style="position: absolute; bottom: 0; left: 0; right: 0; margin-left: 48px; margin-right: 20px; border-top: 7px solid red;"></div>
+                <div style="position: absolute; bottom: 0; left: 0; right: 0; margin-left: 35px; margin-right: 20px; border-top: 7px solid red;"></div>
             </t>
         </t>
     </template>
