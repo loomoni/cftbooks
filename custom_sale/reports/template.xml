@@ -495,7 +495,7 @@
                             </tbody>
                         </table>
                         <br/>
-                        <table style="width: 94%; border-collapse: collapse; margin-left: 35px;">
+                        <table style="width: 100%; border-collapse: collapse; margin-left: 35px;">
                             <tr>
                                 <td style="padding: 8px; text-align: left; background-color: #ffffff;">
                                 </td>
@@ -819,20 +819,17 @@
                 <div style="position: absolute; bottom: 90px; left: 45px; right: 40px; font-size: 20px">
                     <strong>Received the above goods in good order and good condition.</strong>
                     <br/>
-                    <br/>
-                    <br/>
+
                     <strong>
                         Name.......................................................            Signature.........................................
                     </strong>
                     <br/>
-                    <br/>
-                    <br/>
+
                     <strong>
                         Date: ........................................
                     </strong>
                     <br/>
-                    <br/>
-                    <br/>
+                    
                     <strong>Please check all items carefully and notify us of any discrepancy within 24 hours.</strong>
                 </div>
                 <div style="position: absolute; bottom: 40px; left: 45px; right: 40px; font-size: 19px">
