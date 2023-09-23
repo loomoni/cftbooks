@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.rule" id="product_user_company_access_rule">
+        <field name="name">Only User with Assigned Company access their Product</field>
+        <field name="model_id" ref="stock.model_product_template"/>
+        <field name="domain_force">[('company_id', '=', user.company_id.id)]</field>
+        <field name="groups" eval="[(4, ref('stock.group_stock_user')), (4, ref('stock.group_stock_manager'))]"/>
+    </record>
+</odoo>
