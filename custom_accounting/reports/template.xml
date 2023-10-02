@@ -10,7 +10,7 @@
                         <!-- Invoice title -->
                         <h1 style="font-size: 25px; color: blue; display: inline-block;">PAYMENT VOUCHER</h1>
                         <!-- Blue horizontal line below the title -->
-                        <hr style="border-top: 5px solid blue; width: 34%; margin-left: 10px; display: inline-block;"></hr>
+                        <hr style="border-top: 5px solid blue; width: 32%; margin-left: 10px; display: inline-block;"></hr>
                     </div>
                     <div class="content">
 

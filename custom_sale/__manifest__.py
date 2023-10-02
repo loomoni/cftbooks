@@ -9,7 +9,7 @@
     'sequence': '8',
     'author': 'Loomoni Morwo',
     'website': 'http://loomoni.com',
-    'depends': ['sale', 'account'],
+    'depends': ['sale', 'account', 'uom'],
     'demo': [],
     'data': [
         'reports/reports.xml',
