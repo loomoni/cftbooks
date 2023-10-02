@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+<!--        <report-->
+<!--                id="payment_voucher_print_pdf_id"-->
+<!--                model="account.payment"-->
+<!--                string="Payment Voucher"-->
+<!--                menu="True"-->
+<!--                report_type="qweb-pdf"-->
+<!--                name="custom_accounting.payment_voucher_print_pdf"-->
+<!--                file="custom_accounting.payment_voucher_print_pdf"-->
+<!--        />-->
+        <record id="payment_voucher_print_pdf_id" model="ir.actions.report">
+            <field name="name">Payment Voucher</field>
+            <field name="model">account.payment</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">custom_accounting.payment_voucher_print_pdf</field>
+            <field name="report_file">custom_accounting.payment_voucher_print_pdf</field>
+            <field name="binding_model_id" ref="account.model_account_payment"/>
+            <field name="binding_type">report</field>
+        </record>
+
+    </data>
+
+</odoo>
