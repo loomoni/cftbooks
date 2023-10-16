@@ -27,3 +27,11 @@ class AccountPaymentCustom(models.Model):
     @api.multi
     def print_delivery_note_action(self):
         return self.env.ref('custom_sale.delivery_note_print_pdf_id').report_action(self)
+
+
+class AccountInvoiceInherit(models.Model):
+    _inherit = 'account.invoice'
+
+    # def action_invoice_to_open(self):
+    #     self.write({'state': 'open'})
+    #     return True
