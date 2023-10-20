@@ -50,6 +50,7 @@
                                 <td style="width: 30%;">
                                     <t t-esc="o.proforma_sequence"/>
                                 </td>
+
                             </tr>
                             <tr style="">
                                 <td style="width: 30%;  margin-left: 30px;">
@@ -58,8 +59,11 @@
                                     </div>
                                 </td>
                                 <!--                                <td style="width: 30%; text-align: center;">LOGO</td>-->
-                                <td style="width: 10%;"></td>
-                                <td style="width: 30%;"></td>
+
+                                 <td style="width: 10%;">Salesperson:</td>
+                                <td style="width: 30%;">
+                                    <t t-esc="o.user_id.name"/>
+                                </td>
                             </tr>
                             <tr style="">
                                 <td style="width: 30%;  margin-left: 30px;">
@@ -130,7 +134,6 @@
                                         TIN:
                                     </span>
                                     <span t-field="o.partner_id.vat"/>
-
                                     <span>
                                         VRN:
                                     </span>
@@ -276,8 +279,11 @@
             <!--            <div class="footer">-->
             <!-- Add the red horizontal line as a footer below the content -->
             <!-- Include the fixed content at the bottom of the page -->
-            <div style="position: absolute; bottom: 90px; left: 45px; right: 40px; font-size: 18px">
+            <div style="position: absolute; bottom: 130px; left: 45px; right: 40px; font-size: 18px">
                 <strong>PRICE VALID 5 WORKING DAYS FROM DATE OF ISSUE</strong>
+            </div>
+            <div style="position: absolute; bottom: 90px; left: 45px; right: 40px; font-size: 18px">
+                <strong>BANK: NMB 24710014112 #CYBERTZ CIVIL COMPANY LIMITED</strong>
             </div>
             <div style="position: absolute; bottom: 40px; left: 45px; right: 40px; font-size: 19px">
                 <strong>Thank you for your business.</strong>
