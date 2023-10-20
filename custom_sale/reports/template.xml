@@ -120,8 +120,21 @@
                                 <td style="width: 30%;"></td>
                             </tr>
                             <tr>
-                                <td colspan="4">
+                                <td colspan="3">
                                     <span t-field="o.partner_id.name"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <span>
+                                        TIN:
+                                    </span>
+                                    <span t-field="o.partner_id.vat"/>
+
+                                    <span>
+                                        VRN:
+                                    </span>
+                                    <span t-field="o.partner_id.vrn"/>
                                 </td>
                             </tr>
                             <tr>
@@ -203,7 +216,7 @@
                             </tbody>
                         </table>
                         <br/>
-                        <table style="width: 100%; border-collapse: collapse; margin-left: 45px;">
+                        <table style="width: 99%; border-collapse: collapse;">
                             <tr>
                                 <td style="padding: 8px; text-align: left; background-color: #ffffff;">
                                 </td>
@@ -284,7 +297,7 @@
                         <hr style="border-top: 5px solid blue; width: 36%; margin-right: 10px; display: inline-block;"></hr>
                         <!-- Invoice title -->
                         <h1 style="font-size: 25px; color: blue; display: inline-block;">INVOICE</h1>
-<!--                        <h1 style="font-size: 25px; color: blue; font-family: 'DejaVu Serif', serif; display: inline-block;">INVOICE</h1>-->
+                        <!--                        <h1 style="font-size: 25px; color: blue; font-family: 'DejaVu Serif', serif; display: inline-block;">INVOICE</h1>-->
 
                         <!-- Blue horizontal line below the title -->
                         <hr style="border-top: 5px solid blue; width: 43%; margin-left: 10px; display: inline-block;"></hr>
@@ -816,7 +829,8 @@
                     <br/>
 
                     <strong>
-                        Name.......................................................            Signature.........................................
+                        Name.......................................................
+                        Signature.........................................
                     </strong>
                     <br/>
 
