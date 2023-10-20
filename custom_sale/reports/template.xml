@@ -134,7 +134,7 @@
                                     <span>
                                         VRN:
                                     </span>
-                                    <span t-field="o.partner_id.vrn"/>
+                                    <span t-field="o.partner_id.vat"/>
                                 </td>
                             </tr>
                             <tr>
