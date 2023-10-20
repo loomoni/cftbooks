@@ -111,3 +111,4 @@ class ResPartnerInherit(models.Model):
     _inherit = "res.partner"
 
     # vrn = fields.Char(string="VRN")
+    vrn = fields.Char(string="VRN")
