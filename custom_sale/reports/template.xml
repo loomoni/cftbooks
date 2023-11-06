@@ -2,6 +2,18 @@
 <odoo>
     <template id="proforma_invoice_print_pdf">
         <t t-call="web.html_container">
+            <style>
+                .page {
+                page-break-before: always;
+                margin: 0;
+                }
+                .page:last-child {
+                page-break-after: auto;
+                }
+              
+
+            </style>
+
             <div class="page" style="margin-top: 0;">
                 <div style="text-align: center;">
                     <!-- Blue horizontal line above the title -->
@@ -60,7 +72,7 @@
                                 </td>
                                 <!--                                <td style="width: 30%; text-align: center;">LOGO</td>-->
 
-                                 <td style="width: 10%;">Salesperson:</td>
+                                <td style="width: 10%;">Salesperson:</td>
                                 <td style="width: 30%;">
                                     <t t-esc="o.user_id.name"/>
                                 </td>
@@ -267,28 +279,67 @@
                         </table>
                     </t>
                 </div>
+
+                <div class="content-container" style="height: 400px; page-break-after: always;">
+                    <!-- Empty div to trigger page break when content exceeds height -->
+                </div>
+
+                <div style="position: absolute; bottom: 105px; left: 45px; right: 40px; font-size: 18px;">
+                    <strong>PRICE VALID 5 WORKING DAYS FROM DATE OF ISSUE</strong>
+                </div>
+                <div style="position: absolute; bottom: 65px; left: 45px; right: 40px; font-size: 18px;">
+                    <strong>BANK: NMB 24710014112 #CYBERTZ CIVIL COMPANY LIMITED</strong>
+                </div>
+                <div style="position: absolute; bottom: 25px; left: 45px; right: 40px; font-size: 19px;">
+                    <strong>Thank you for your business.</strong>
+                </div>
+                <div style="position: absolute; bottom: 10px; left: 48px; right: 20px;">
+                    <div style="border-top: 6px solid red;"></div>
+                </div>
+
             </div>
-            <!--            <div style="margin-left: 45px; margin-right: 40px; margin-top: 330px; font-size: 18px">-->
+
+            <!-- Include the fixed content at the bottom of the page -->
+            <!--            <div style="position: absolute; bottom: 130px; left: 45px; right: 40px; font-size: 18px">-->
             <!--                <strong>PRICE VALID 5 WORKING DAYS FROM DATE OF ISSUE</strong>-->
             <!--            </div>-->
-            <!--            <div style="margin-left: 45px; margin-right: 40px; margin-top: 20px; font-size: 19px">-->
+            <!--            <di style="position: absolute; bottom: 90px; left: 45px; right: 40px; font-size: 18px">-->
+            <!--                <strong>BANK: NMB 24710014112 #CYBERTZ CIVIL COMPANY LIMITED</strong>-->
+            <!--            </di>-->
+            <!--            <div class="row justify-content-end" style="position: absolute; bottom: 40px; left: 45px; right: 40px; font-size: 19px">-->
             <!--                <strong>Thank you for your business.</strong>-->
             <!--            </div>-->
-            <!--            &lt;!&ndash; Add the red horizontal line as a footer below the printed paper &ndash;&gt;-->
-            <!--            <div style="position: absolute; margin-left: 53px; margin-right: 20px; bottom: 0; left: 0; right: 0; border-top: 7px solid red;"></div>-->
-            <!--            <div class="footer">-->
-            <!-- Add the red horizontal line as a footer below the content -->
-            <!-- Include the fixed content at the bottom of the page -->
-            <div style="position: absolute; bottom: 130px; left: 45px; right: 40px; font-size: 18px">
-                <strong>PRICE VALID 5 WORKING DAYS FROM DATE OF ISSUE</strong>
-            </div>
-            <div style="position: absolute; bottom: 90px; left: 45px; right: 40px; font-size: 18px">
-                <strong>BANK: NMB 24710014112 #CYBERTZ CIVIL COMPANY LIMITED</strong>
-            </div>
-            <div style="position: absolute; bottom: 40px; left: 45px; right: 40px; font-size: 19px">
-                <strong>Thank you for your business.</strong>
-            </div>
-            <div style="position: absolute; bottom: 0; left: 0; right: 0; margin-left: 48px; margin-right: 20px; border-top: 7px solid red;"></div>
+            <!--            <div style="position: absolute; bottom: 0; left: 0; right: 0; margin-left: 48px; margin-right: 20px; border-top: 7px solid red;"></div>-->
+
+            <!--            <div class="page" style="margin-top: 0;">-->
+            <!--                &lt;!&ndash; Content for additional pages goes here &ndash;&gt;-->
+            <!--                <div style="position: absolute; bottom: 105px; left: 45px; right: 40px; font-size: 18px;">-->
+            <!--                    <strong>PRICE VALID 5 WORKING DAYS FROM DATE OF ISSUE</strong>-->
+            <!--                </div>-->
+            <!--                <div style="position: absolute; bottom: 65px; left: 45px; right: 40px; font-size: 18px;">-->
+            <!--                    <strong>BANK: NMB 24710014112 #CYBERTZ CIVIL COMPANY LIMITED</strong>-->
+            <!--                </div>-->
+            <!--                <div style="position: absolute; bottom: 25px; left: 45px; right: 40px; font-size: 19px;">-->
+            <!--                    <strong>Thank you for your business.</strong>-->
+            <!--                </div>-->
+            <!--                <div style="position: absolute; bottom: 15px; left: 0; right: 0; margin-left: 48px; margin-right: 20px; border-top: 6px solid red;"></div>-->
+            <!--            </div>-->
+
+
+            <!--            <div class="page" style="margin-top: 0;">-->
+            <!--                            <div style="position: absolute; bottom: 105px; left: 45px; right: 40px; font-size: 18px;">-->
+            <!--                                <strong>PRICE VALID 5 WORKING DAYS FROM DATE OF ISSUE</strong>-->
+            <!--                            </div>-->
+            <!--                            <div style="position: absolute; bottom: 65px; left: 45px; right: 40px; font-size: 18px;">-->
+            <!--                                <strong>BANK: NMB 24710014112 #CYBERTZ CIVIL COMPANY LIMITED</strong>-->
+            <!--                            </div>-->
+            <!--                            <div style="position: absolute; bottom: 25px; left: 45px; right: 40px; font-size: 19px;">-->
+            <!--                                <strong>Thank you for your business.</strong>-->
+            <!--                            </div>-->
+            <!--                            <div style="position: absolute; bottom: 10px; left: 48px; right: 20px;">-->
+            <!--                                <div style="border-top: 6px solid red;"></div>-->
+            <!--                            </div>-->
+            <!--            </div>-->
 
         </t>
     </template>

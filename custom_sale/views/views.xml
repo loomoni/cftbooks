@@ -34,6 +34,7 @@
             <field name="arch" type="xml">
                 <xpath expr="//form/header/button[@name='button_scrap']" position="replace">
                     <button string="Print Delivery Note" name="print_delivery_note_action" type="object" class="oe_highlight"/>
+                    <button string="Return to draft" name="return_to_draft" type="object" class="oe_highlight"/>
                 </xpath>
             </field>
         </record>

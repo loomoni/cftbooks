@@ -106,6 +106,11 @@ class StockPickingInherit(models.Model):
     def print_delivery_note_action(self):
         return self.env.ref('custom_sale.delivery_note_print_pdf_id').report_action(self)
 
+    @api.multi
+    def return_to_draft(self):
+        self.write({'state': 'draft'})
+        return True
+
 
 class ResPartnerInherit(models.Model):
     _inherit = "res.partner"
