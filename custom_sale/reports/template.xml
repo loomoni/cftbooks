@@ -48,7 +48,7 @@
             </style>
 
 
-            <div class="page" style="margin-top: 0;">
+            <div style="margin-top: 0;">
                 <div style="text-align: center;">
                     <!-- Blue horizontal line above the title -->
                     <hr style="border-top: 5px solid blue; width: 30%; margin-right: 10px; display: inline-block;"></hr>
@@ -339,7 +339,7 @@
             <!--                <div style="height: 80%; width: 100%;">&#160;</div>-->
             <!--            </div>-->
 
-            <div class="last-page">
+            <div class="page last-page">
                 <!-- Empty div to trigger page break when content exceeds height -->
             </div>
 
