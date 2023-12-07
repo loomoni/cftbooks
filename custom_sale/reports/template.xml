@@ -14,7 +14,7 @@
             </style>
 
 
-            <div style="margin-top: 0; margin-bottom: 50px">
+            <div style="margin-top: 0; padding-bottom: 50px">
                 <div style="text-align: center;">
                     <!-- Blue horizontal line above the title -->
                     <hr style="border-top: 5px solid blue; width: 30%; margin-right: 10px; display: inline-block;"></hr>
