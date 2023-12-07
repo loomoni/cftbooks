@@ -9,12 +9,12 @@
                 }
                 .last-page {
                 page-break-before: auto; /* Ensure no page break before the last page */
-                margin-top: 100%;
+                margin-top: 90%;
                 }
             </style>
 
 
-            <div style="margin-top: 0;">
+            <div style="margin-top: 0; margin-bottom: 50px">
                 <div style="text-align: center;">
                     <!-- Blue horizontal line above the title -->
                     <hr style="border-top: 5px solid blue; width: 30%; margin-right: 10px; display: inline-block;"></hr>
