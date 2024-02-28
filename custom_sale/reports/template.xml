@@ -491,7 +491,7 @@
                                                 <span t-field="line.price_unit"/>
                                             </td>
                                             <td style="border-right: 1px solid #000; padding: 8px; text-align: right; background-color: #ffffff;">
-                                                <span t-field="line.price_total"/>
+                                                <span t-field="line.price_subtotal"/>
                                             </td>
                                         </t>
                                         <t t-if="odd_even == 0">
@@ -508,7 +508,7 @@
                                                 <span t-field="line.price_unit"/>
                                             </td>
                                             <td style="border-right: 1px solid #000; padding: 8px; text-align: right; background-color:  #f2f2f2;">
-                                                <span t-field="line.price_total"/>
+                                                <span t-field="line.price_subtotal"/>
                                             </td>
                                         </t>
                                     </tr>
