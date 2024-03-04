@@ -289,11 +289,11 @@
                 <div class="page">
                     <div style="position: absolute; bottom: 105px; left: 45px; right: 40px; font-size: 18px;">
                         <strong>PRICE VALID 5 WORKING DAYS FROM DATE OF ISSUE</strong>
-                    </div>
+                    </div><br/><br/>
 
                     <div t-if="o.company_id.id == 1"
                          style="position: absolute; bottom: 65px; left: 45px; right: 40px; font-size: 18px;">
-                        <strong>BANK: NMB 24710014112 #CYBERTZ CIVIL COMPANY LIMITED</strong> <br/>
+                        <strong>BANK: NMB 24710014112 #CYBERTZ CIVIL COMPANY LIMITED</strong> <br/><br/>
                         <strong>BANK: CRDB 015C840374600 #CYBERTZ COMPANY LTD</strong>
                     </div>
                     <div t-if="o.company_id.id == 2"
