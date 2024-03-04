@@ -291,15 +291,6 @@
                         <strong>PRICE VALID 5 WORKING DAYS FROM DATE OF ISSUE</strong>
                     </div>
 
-                    <!--                <div style="position: absolute; bottom: 65px; left: 45px; right: 40px; font-size: 18px;">-->
-                    <!--                    <strong>BANK: NMB 24710014112 #CYBERTZ CIVIL COMPANY LIMITED</strong>-->
-                    <!--                </div>-->
-
-                    <!--                <div style="position: absolute; bottom: 65px; left: 45px; right: 40px; font-size: 18px;">-->
-                    <!--                    <strong>BANK: NMB 24710005762 #FARMING CITY COMPANY LIMITED </strong>-->
-                    <!--                </div>-->
-
-
                     <div t-if="o.company_id.id == 1"
                          style="position: absolute; bottom: 65px; left: 45px; right: 40px; font-size: 18px;">
                         <strong>BANK: NMB 24710014112 #CYBERTZ CIVIL COMPANY LIMITED</strong>
@@ -653,11 +644,20 @@
                     </strong>
                     <br/>
                     <br/>
-                    <strong>BANK: NMB 24710014112</strong>
-                    <br/>
-                    <strong>
-                        <span>CYBERTZ CIVIL COMPANY LTD</span>
-                    </strong>
+                    <div t-if="o.company_id.id == 1">
+                        <strong>BANK: NMB 24710014112</strong>
+                        <br/>
+                        <strong>
+                            <span>CYBERTZ CIVIL COMPANY LTD</span>
+                        </strong>
+                    </div>
+                     <div t-if="o.company_id.id == 2">
+                        <strong>BANK: NMB 24710005762</strong>
+                        <br/>
+                        <strong>
+                            <span>FARMING CITY COMPANY LIMITED </span>
+                        </strong>
+                    </div>
                 </div>
                 <div style="position: absolute; bottom: 40px; left: 35px; right: 40px; font-size: 17px">
                     <strong>Thank you for your business.</strong>
