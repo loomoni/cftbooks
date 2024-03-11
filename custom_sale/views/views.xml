@@ -52,8 +52,12 @@
                 <button name="action_quotation_send" position="attributes">
                     <attribute name="invisible">1</attribute>
                 </button>
+                <xpath expr="//field[@name='payment_term_id']" position="attributes">
+                   <attribute name="invisible">1</attribute>
+                </xpath>
                 <xpath expr="//field[@name='payment_term_id']" position="after">
-                    <field name="delivery_term"/>
+                    <field name="payment_terms"/>
+                    <field name="delivery_terms"/>
                 </xpath>
             </field>
         </record>

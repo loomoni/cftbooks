@@ -288,10 +288,10 @@
 
                 <div class="page">
                     <div style="position: absolute; bottom: 125px; left: 45px; right: 40px; font-size: 18px;">
-                        <strong><span t-field="o.payment_term_id.name"/></strong><br/>
+                        <strong><span t-field="o.payment_terms"/></strong><br/>
                     </div>
                     <div style="position: absolute; bottom: 100px; left: 45px; right: 40px; font-size: 18px;">
-                        <strong><span t-field="o.delivery_term"/></strong><br/>
+                        <strong><span t-field="o.delivery_terms"/></strong><br/>
                     </div>
 
                     <div t-if="o.company_id.id == 1"
