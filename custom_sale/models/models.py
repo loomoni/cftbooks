@@ -8,6 +8,8 @@ from odoo import fields, models, api
 class SaleOrderCustom(models.Model):
     _inherit = 'sale.order'
 
+    delivery_term = fields.Char(string="Delivery Term", store=True)
+
     def _default_reference(self):
         proformaList = self.env['sale.order'].sudo().search_count([])
         return 10023 + proformaList + 1

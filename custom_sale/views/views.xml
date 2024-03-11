@@ -33,7 +33,8 @@
             <field name="inherit_id" ref="stock.view_picking_form"/>
             <field name="arch" type="xml">
                 <xpath expr="//form/header/button[@name='button_scrap']" position="replace">
-                    <button string="Print Delivery Note" name="print_delivery_note_action" type="object" class="oe_highlight"/>
+                    <button string="Print Delivery Note" name="print_delivery_note_action" type="object"
+                            class="oe_highlight"/>
                     <button string="Return to draft" name="return_to_draft" type="object" class="oe_highlight"/>
                 </xpath>
             </field>
@@ -51,6 +52,9 @@
                 <button name="action_quotation_send" position="attributes">
                     <attribute name="invisible">1</attribute>
                 </button>
+                <xpath expr="//field[@name='payment_term_id']" position="after">
+                    <field name="delivery_term"/>
+                </xpath>
             </field>
         </record>
 
@@ -61,12 +65,12 @@
             <field name="inherit_id" ref="product.product_template_only_form_view"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='default_code']" position="before">
-                    <field name="uom_id"  create="1" edit="1"/>
+                    <field name="uom_id" create="1" edit="1"/>
                 </xpath>
             </field>
         </record>
 
-                <!-- Inherit customer view form view -->
+        <!-- Inherit customer view form view -->
         <record id="view_res_partner_form_inherit_id" model="ir.ui.view">
             <field name="name">res.partner.form.inherit</field>
             <field name="model">res.partner</field>
