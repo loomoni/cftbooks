@@ -89,6 +89,11 @@ class AccountInvoice(models.Model):
 class StockPickingInherit(models.Model):
     _inherit = 'stock.picking'
 
+    # = fields.Many2one('res.users', string='User', default=lambda self: self.env.user)
+    sale_person_user_id = fields.Many2one('res.users', string='Salesperson', track_visibility='onchange',
+                                          readonly=True, states={'draft': [('readonly', False)]},
+                                          default=lambda self: self.env.user, copy=False)
+
     @api.model
     def company_info(self):
         company = self.env.user.company_id

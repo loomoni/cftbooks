@@ -85,5 +85,17 @@
                 </xpath>
             </field>
         </record>
+
+                <!-- Inherit customer view form view -->
+<!--        <record id="view_stock_picking_inherit_id" model="ir.ui.view">-->
+<!--            <field name="name">stock.picking.form.inherit</field>-->
+<!--            <field name="model">stock.picking</field>-->
+<!--            <field name="inherit_id" ref="stock.view_picking_form"/>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <xpath expr="//field[@name='date_done']" position="after">-->
+<!--                    <field name="sale_person_user_id"/>-->
+<!--                </xpath>-->
+<!--            </field>-->
+<!--        </record>-->
     </data>
 </odoo>

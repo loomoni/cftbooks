@@ -738,7 +738,13 @@
                                 </td>
                                 <!--                                <td style="width: 30%; text-align: center;">LOGO</td>-->
                                 <td style="width: 10%;">Salesperson:</td>
-                                <td style="width: 30%;">DEONIDACE</td>
+                                <div t-if="o.company_id.id == 1">
+                                    <td style="width: 30%;">DEONIDACE</td>
+                                </div>
+                                <div t-if="o.company_id.id == 2">
+                                    <td style="width: 30%;">NICE</td>
+                                </div>
+<!--                                <td style="width: 30%;"><t t-esc=" o.sale_person_user_id.name"/></td>-->
                             </tr>
                             <tr style="">
                                 <td style="width: 30%;  margin-left: 30px;">
