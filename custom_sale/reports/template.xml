@@ -701,7 +701,7 @@
                                 <td style="width: 30%; text-align: center;"></td>
                                 <td style="width: 7%;">Date:</td>
                                 <td style="width: 30%;">
-                                    <span t-field="o.date_done"/>
+                                    <span t-field="o.scheduled_date"/>
                                 </td>
                             </tr>
                             <tr>
