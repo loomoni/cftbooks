@@ -288,15 +288,22 @@
 
                 <div class="page">
                     <div style="position: absolute; bottom: 125px; left: 45px; right: 40px; font-size: 18px;">
-                        <strong><span t-field="o.payment_terms"/></strong><br/>
+                        <strong>
+                            <span t-field="o.payment_terms"/>
+                        </strong>
+                        <br/>
                     </div>
                     <div style="position: absolute; bottom: 100px; left: 45px; right: 40px; font-size: 18px;">
-                        <strong><span t-field="o.delivery_terms"/></strong><br/>
+                        <strong>
+                            <span t-field="o.delivery_terms"/>
+                        </strong>
+                        <br/>
                     </div>
 
                     <div t-if="o.company_id.id == 1"
                          style="position: absolute; bottom: 60px; left: 45px; right: 40px; font-size: 13px;">
-                        <strong>BANK: NMB 24710014112 #CYBERTZ CIVIL COMPANY LIMITED</strong> <br/>
+                        <strong>BANK: NMB 24710014112 #CYBERTZ CIVIL COMPANY LIMITED</strong>
+                        <br/>
                         <strong>BANK: CRDB 015C840374600 #CYBERTZ COMPANY LTD</strong>
                     </div>
                     <div t-if="o.company_id.id == 2"
@@ -655,11 +662,11 @@
                             <span>CYBERTZ CIVIL COMPANY LTD</span>
                         </strong>
                     </div>
-                     <div t-if="o.company_id.id == 2">
+                    <div t-if="o.company_id.id == 2">
                         <strong>BANK: NMB 24710005762</strong>
                         <br/>
                         <strong>
-                            <span>FARMING CITY COMPANY LIMITED </span>
+                            <span>FARMING CITY COMPANY LIMITED</span>
                         </strong>
                     </div>
                 </div>
@@ -675,6 +682,18 @@
     <template id="delivery_note_print_pdf">
         <t t-call="web.html_container">
             <t t-foreach="docs" t-as="o">
+
+                <style>
+                    .page {
+                    page-break-before: always;
+                    margin: 0;
+                    }
+                    .last-page {
+                    page-break-before: auto; /* Ensure no page break before the last page */
+                    margin-top: 85%;
+                    }
+                </style>
+
                 <div class="page" style="margin-top: 0;">
                     <div style="text-align: center;">
                         <!-- Blue horizontal line above the title -->
@@ -744,7 +763,7 @@
                                 <div t-if="o.company_id.id == 2">
                                     <td style="width: 30%;">NICE</td>
                                 </div>
-<!--                                <td style="width: 30%;"><t t-esc=" o.sale_person_user_id.name"/></td>-->
+                                <!--                                <td style="width: 30%;"><t t-esc=" o.sale_person_user_id.name"/></td>-->
                             </tr>
                             <tr style="">
                                 <td style="width: 30%;  margin-left: 30px;">
@@ -872,28 +891,35 @@
                     </div>
                 </div>
 
-                <div style="position: absolute; bottom: 90px; left: 45px; right: 40px; font-size: 20px">
-                    <strong>Received the above goods in good order and good condition.</strong>
-                    <br/>
-                    <br/>
-
-                    <strong>
-                        Name.......................................................
-                        Signature.........................................
-                    </strong>
-                    <br/>
-
-                    <strong>
-                        Date: ........................................
-                    </strong>
-                    <br/>
-
-                    <strong>Please check all items carefully and notify us of any discrepancy within 24 hours.</strong>
+                <div class="page last-page">
+                    <!-- Empty div to trigger page break when content exceeds height -->
                 </div>
-                <div style="position: absolute; bottom: 40px; left: 45px; right: 40px; font-size: 19px">
-                    <strong>Thank you for your business.</strong>
+
+                <div class="page">
+                    <div style="position: absolute; bottom: 90px; left: 45px; right: 40px; font-size: 20px">
+                        <strong>Received the above goods in good order and good condition.</strong>
+                        <br/>
+                        <br/>
+
+                        <strong>
+                            Name.......................................................
+                            Signature.........................................
+                        </strong>
+                        <br/>
+
+                        <strong>
+                            Date: ........................................
+                        </strong>
+                        <br/>
+
+                        <strong>Please check all items carefully and notify us of any discrepancy within 24 hours.
+                        </strong>
+                    </div>
+                    <div style="position: absolute; bottom: 40px; left: 45px; right: 40px; font-size: 19px">
+                        <strong>Thank you for your business.</strong>
+                    </div>
+                    <div style="position: absolute; bottom: 0; left: 0; right: 0; margin-left: 48px; margin-right: 20px; border-top: 7px solid red;"></div>
                 </div>
-                <div style="position: absolute; bottom: 0; left: 0; right: 0; margin-left: 48px; margin-right: 20px; border-top: 7px solid red;"></div>
             </t>
         </t>
     </template>
