@@ -688,13 +688,14 @@
                     page-break-before: always;
                     margin: 0;
                     }
+
                     .last-page {
                     page-break-before: auto; /* Ensure no page break before the last page */
                     margin-top: 85%;
                     }
                 </style>
 
-                <div class="page" style="margin-top: 0;">
+                <div style="margin-top: 0; padding-bottom: 50px">
                     <div style="text-align: center;">
                         <!-- Blue horizontal line above the title -->
                         <hr style="border-top: 5px solid blue; width: 32%; margin-right: 10px; display: inline-block;"></hr>
