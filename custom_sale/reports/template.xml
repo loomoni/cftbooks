@@ -326,7 +326,18 @@
     <template id="invoice_print_pdf">
         <t t-call="web.html_container">
             <t t-foreach="docs" t-as="o">
-                <div class="page" style="margin-top: 0;">
+                <style>
+                    .page {
+                    page-break-before: always;
+                    margin: 0;
+                    }
+                    .last-page {
+                    page-break-before: auto; /* Ensure no page break before the last page */
+                    margin-top: 85%;
+                    }
+                </style>
+
+                <div style="margin-top: 0; padding-bottom: 50px">
                     <div style="text-align: center;">
                         <!-- Blue horizontal line above the title -->
                         <hr style="border-top: 5px solid blue; width: 36%; margin-right: 10px; display: inline-block;"></hr>
@@ -647,33 +658,38 @@
                 <!--            <div class="footer">-->
                 <!-- Add the red horizontal line as a footer below the content -->
                 <!-- Include the fixed content at the bottom of the page -->
-                <div style="position: absolute; bottom: 90px; left: 35px; right: 40px; font-size: 18px">
-                    <strong>BANK: CRDB 015C840374600</strong>
-                    <br/>
-                    <strong>
-                        <t t-esc="o.company_info().get('name')"/>
-                    </strong>
-                    <br/>
-                    <br/>
-                    <div t-if="o.company_id.id == 1">
-                        <strong>BANK: NMB 24710014112</strong>
+                <div class="page last-page">
+                    <!-- Empty div to trigger page break when content exceeds height -->
+                </div>
+                <div class="page">
+                    <div style="position: absolute; bottom: 90px; left: 35px; right: 40px; font-size: 18px">
+                        <strong>BANK: CRDB 015C840374600</strong>
                         <br/>
                         <strong>
-                            <span>CYBERTZ CIVIL COMPANY LTD</span>
+                            <t t-esc="o.company_info().get('name')"/>
                         </strong>
-                    </div>
-                    <div t-if="o.company_id.id == 2">
-                        <strong>BANK: NMB 24710005762</strong>
                         <br/>
-                        <strong>
-                            <span>FARMING CITY COMPANY LIMITED</span>
-                        </strong>
+                        <br/>
+                        <div t-if="o.company_id.id == 1">
+                            <strong>BANK: NMB 24710014112</strong>
+                            <br/>
+                            <strong>
+                                <span>CYBERTZ CIVIL COMPANY LTD</span>
+                            </strong>
+                        </div>
+                        <div t-if="o.company_id.id == 2">
+                            <strong>BANK: NMB 24710005762</strong>
+                            <br/>
+                            <strong>
+                                <span>FARMING CITY COMPANY LIMITED</span>
+                            </strong>
+                        </div>
                     </div>
+                    <div style="position: absolute; bottom: 40px; left: 35px; right: 40px; font-size: 17px">
+                        <strong>Thank you for your business.</strong>
+                    </div>
+                    <div style="position: absolute; bottom: 0; left: 0; right: 0; margin-left: 35px; margin-right: 20px; border-top: 7px solid red;"></div>
                 </div>
-                <div style="position: absolute; bottom: 40px; left: 35px; right: 40px; font-size: 17px">
-                    <strong>Thank you for your business.</strong>
-                </div>
-                <div style="position: absolute; bottom: 0; left: 0; right: 0; margin-left: 35px; margin-right: 20px; border-top: 7px solid red;"></div>
             </t>
         </t>
     </template>
