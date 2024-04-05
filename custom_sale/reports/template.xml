@@ -912,30 +912,34 @@
                     <!-- Empty div to trigger page break when content exceeds height -->
                 </div>
 
-                <div class="page">
-                    <div style="position: absolute; bottom: 90px; left: 45px; right: 40px; font-size: 20px">
-                        <strong>Received the above goods in good order and good condition.</strong>
-                        <br/>
-                        <br/>
+                <div class="page" style="margin-top: 270%">
+<!--                    <div class="footer">-->
+                        <div style="position: absolute; bottom: 90px; left: 45px; right: 40px; font-size: 20px">
+                            <strong>Received the above goods in good order and good condition.</strong>
+                            <br/>
+                            <br/>
 
-                        <strong>
-                            Name.......................................................
-                            Signature.........................................
-                        </strong>
-                        <br/>
+                            <strong>
+                                Name.......................................................
+                                Signature.........................................
+                            </strong>
+                            <br/>
 
-                        <strong>
-                            Date: ........................................
-                        </strong>
-                        <br/>
+                            <strong>
+                                Date: ........................................
+                            </strong>
+                            <br/>
 
-                        <strong>Please check all items carefully and notify us of any discrepancy within 24 hours.
-                        </strong>
-                    </div>
-                    <div style="position: absolute; bottom: 40px; left: 45px; right: 40px; font-size: 19px">
-                        <strong>Thank you for your business.</strong>
-                    </div>
-                    <div style="position: absolute; bottom: 0; left: 0; right: 0; margin-left: 48px; margin-right: 20px; border-top: 7px solid red;"></div>
+                            <strong>Please check all items carefully and notify us of any discrepancy within 24 hours.
+                            </strong>
+                        </div>
+                        <div style="position: absolute; bottom: 40px; left: 45px; right: 40px; font-size: 19px">
+                            <strong>Thank you for your business.</strong>
+                        </div>
+                        <div style="position: absolute; bottom: 0; left: 0; right: 0; margin-left: 48px; margin-right: 20px; border-top: 7px solid red;"></div>
+
+
+<!--                    </div>-->
                 </div>
             </t>
         </t>
