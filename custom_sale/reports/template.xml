@@ -912,7 +912,7 @@
                     <!-- Empty div to trigger page break when content exceeds height -->
                 </div>
 
-                <div class="page" style="margin-top: 270%">
+                <div class="page">
 <!--                    <div class="footer">-->
                         <div style="position: absolute; bottom: 90px; left: 45px; right: 40px; font-size: 20px">
                             <strong>Received the above goods in good order and good condition.</strong>
